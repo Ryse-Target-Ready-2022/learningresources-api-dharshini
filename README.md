@@ -1,2 +1,2 @@
 # learningresources-api-dharshini
-Target Ready 2022 Spring Boot Project
+A Project to learn about Java, Spring Boot, REST fundamentals.

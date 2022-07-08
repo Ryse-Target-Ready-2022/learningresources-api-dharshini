@@ -91,7 +91,7 @@ public class LearningResource implements Serializable {
     public void setRetiredDate(LocalDate retiredDate) {
         this.retiredDate = retiredDate;
     }
-
+    
     @Override
     public String toString() {
         return "LearningResource{" +

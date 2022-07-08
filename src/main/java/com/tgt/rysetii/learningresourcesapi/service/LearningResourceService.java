@@ -41,7 +41,7 @@ public class LearningResourceService {
         return learningResources;
     }
 
-    private LearningResource createLearningResource(String[] attributes){
+    private LearningResource createLearningResource(String[] attributes) {
         Integer learningResourceId = Integer.parseInt(attributes[0].replaceAll("\\D+",""));
         String learningResourceName = attributes[1];
         Double costPrice = Double.parseDouble(attributes[2]);

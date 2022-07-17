@@ -2,18 +2,15 @@ package com.tgt.rysetii.learningresourcesapi.service;
 
 import com.tgt.rysetii.learningresourcesapi.entity.LearningResource;
 import com.tgt.rysetii.learningresourcesapi.repository.LearningResourceRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 import static java.util.stream.Collectors.toList;
 
-
 @Service
 public class LearningResourceService {
 
-    @Autowired
     private final LearningResourceRepository learningResourceRepository;
 
     public LearningResourceService(LearningResourceRepository learningResourceRepository) {
@@ -23,7 +20,6 @@ public class LearningResourceService {
     public void  saveLearningResources(List<LearningResource> learningResources){
         for (LearningResource learningResource : learningResources)
             learningResourceRepository.save(learningResource);
-        System.out.println("Learning Resources Successfully Added!");
     }
 
     public List<LearningResource> getLearningResources(){
@@ -46,4 +42,7 @@ public class LearningResourceService {
         return learningResources;
     }
 
+    public void deleteLearningResourceById(int learningResourceId) {
+        learningResourceRepository.deleteById(learningResourceId);
+    }
 }
